@@ -1,4 +1,6 @@
+from os import error
 from flask import Flask , render_template,request
+from flask.sessions import NullSession
 import numpy as np
 import pandas as pd
 from apyori import apriori
@@ -86,8 +88,11 @@ def find(cons):
 def consequents():
     cons=[]
     if request.method=='POST':
-        ant=request.form['product']
-        cons=find(ant)
+        ant=request.form['product'] 
+        if ant=='':
+            cons=' '
+        else:
+            cons=find(ant)
     return render_template('index.html',cons=cons)
 
 if __name__ == '__main__':

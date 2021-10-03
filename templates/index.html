@@ -67,14 +67,15 @@ h1{
     <h1 >Association Rules</h1>
     <br><br> <br>
     <div class="dropdown">
-      <label for="products">Enter the product name:{{z|safe}}  </label>
+      <label for="products">Enter the product name:</label>
       <input type="text" id="product" name="product"><br><br>
    <br>
-    <input class="btn btn-primary" type="submit" value="submit">
+    <input class="btn btn-primary" type="submit" value="Show Consequent Products">
 </form>
 <br><br>
+
 {%for x in cons%}
-<p>{{x|safe}}</p>
+    <p>{{x|safe}}</p>
 {%endfor%}
 </body>
 </html>
