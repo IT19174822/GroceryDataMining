@@ -90,7 +90,7 @@ def consequents():
     if request.method=='POST':
         ant=request.form['product'] 
         if ant=='':
-            cons=' '
+            cons=''
         else:
             cons=find(ant)
     return render_template('index.html',cons=cons)
