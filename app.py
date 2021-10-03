@@ -1,10 +1,7 @@
-from os import error
 from flask import Flask , render_template,request
-from flask.sessions import NullSession
-import numpy as np
 import pandas as pd
 from apyori import apriori
-import pickle
+
 
 app = Flask(__name__)
 
